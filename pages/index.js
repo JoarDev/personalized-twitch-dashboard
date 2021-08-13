@@ -1,8 +1,49 @@
-// Main entry point of your app
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import React, { useState } from "react"
 
 const Home = () => {
+
+  const [channelsList, setchannelsList] = useState([])
+
+  const addStreamChannel = async e => {
+    e.preventDefault()
+
+    const { value } = e.target.elements.name
+
+    if (value) {
+      console.log("input: ", value)
+
+      // NextJs Server API call
+
+      const path = `https://${window.location.hostname}`
+
+      const response = await fetch(`${path}/api/twitch`, {
+        method: "POST",
+        headers: {
+          "content-Type": "application/json"
+        },
+        body: JSON.stringify({ data: value })
+      })
+
+      const json = await response.json()
+
+      console.log("From the server", json.data)
+      setchannelsList(prevState => [...prevState, value])
+      e.target.elements.name.value = ""
+    }
+  }
+
+
+  const renderForm = () => (
+    <div className={styles.formContainer}>
+      <form onSubmit={addStreamChannel}>
+        <input type="text" id="name" placeholder="Twitch Channel Name" required />
+        <button type="submit">Add Streamer</button>
+      </form>
+    </div>
+  )
+
   return (
     <div className={styles.container}>
       <Head>
@@ -10,7 +51,8 @@ const Home = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={styles.inputContainer}>
-        <h1>Welcome to the Personalized Twitch Dashboard! 🎉</h1>
+        {renderForm()}
+        <div>{channelsList.join(",")}</div>
       </div>
     </div>
   )
