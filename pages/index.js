@@ -29,7 +29,7 @@ const Home = () => {
       const json = await response.json()
 
       console.log("From the server", json.data)
-      setchannelsList(prevState => [...prevState, value])
+      setchannelsList(prevState => [...prevState, json.data.display_name])
       e.target.elements.name.value = ""
     }
   }
@@ -52,7 +52,7 @@ const Home = () => {
       </Head>
       <div className={styles.inputContainer}>
         {renderForm()}
-        <div>{channelsList.join(",")}</div>
+        <div>{channelsList.join(", ")}</div>
       </div>
     </div>
   )
