@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import React, { useState } from "react"
+import StreamerGrid from "../components/StreamerGrid"
 
 const Home = () => {
 
@@ -29,11 +30,12 @@ const Home = () => {
       const json = await response.json()
 
       console.log("From the server", json.data)
-      setchannelsList(prevState => [...prevState, json.data.display_name])
+      setchannelsList(prevState => [...prevState, json.data])
       e.target.elements.name.value = ""
     }
   }
 
+  //<div>{channelsList.join(", ")}</div>
 
   const renderForm = () => (
     <div className={styles.formContainer}>
@@ -50,9 +52,11 @@ const Home = () => {
         <title>🎥 Personal Twitch Dashboard</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className={styles.inputContainer}>
-        {renderForm()}
-        <div>{channelsList.join(", ")}</div>
+      <div className={styles.inputContainer}>        
+        <div className={styles.inputContainer}>
+          {renderForm()}
+          <StreamerGrid channels={channelsList}/>
+        </div>
       </div>
     </div>
   )
