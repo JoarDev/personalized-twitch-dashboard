@@ -55,7 +55,7 @@ const Home = () => {
       <div className={styles.inputContainer}>        
         <div className={styles.inputContainer}>
           {renderForm()}
-          <StreamerGrid channels={channelsList}/>
+          <StreamerGrid channels={channelsList} setChannel={setchannelsList}/>
         </div>
       </div>
     </div>
