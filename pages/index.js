@@ -120,14 +120,14 @@ const Home = () => {
           const json = await channelResp.json()
 
           if (json.data) {
-            //setchannelsList(prev => [...prev,json.data])
+            setchannelsList(prev => [...prev,json.data])
             channelData.push(json.data)
             console.log(channelData)
           }
 
           
         }
-        setchannelsList(channelData)
+        //setchannelsList(channelData)
       }
     } catch (error) {
       console.warn(error.message)

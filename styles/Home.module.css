@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(180deg, #7F53AC 0%, rgba(108, 112, 218, 0.797741) 69.74%, rgba(100, 125, 238, 0.71) 100%);
+  background: linear-gradient( 135deg, #FFE985 10%, #FA742B 100%);;
   overflow: auto;
 }
 

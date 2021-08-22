@@ -4,9 +4,35 @@ import styles from "../../styles/StreamerGrid.module.css"
 
 const StreamerGrid = ({ channels, setChannel }) => {
 
-  const removeChannelAction = channelId => () => {
+  const removeChannelAction = channelId => async () => {
     console.log("removing channel...")
-    setChannel(channels.filter(channel => channel.id !== channelId))
+
+    const filteredChannels = channels.filter(channel => channel.id !== channelId)
+    setChannel(filteredChannels)
+
+    const joinedChannels = filteredChannels.map(channel => channel.display_name.toLowerCase()).join(",")
+
+    await setDBChannels(joinedChannels)
+  }
+
+  const setDBChannels = async channels => {
+    try {
+      const path = `https://${window.location.hostname}`
+
+      const response = await fetch(`${path}/api/database`, {
+        method: "POST",
+        body: JSON.stringify({
+          key: "CHANNELS",
+          value: channels
+        })
+      })
+
+      if (response.status === 200) {
+        console.log(`Set ${channels} in DB.`)
+      }
+    } catch (error) {
+      console.warn(error.message)
+    }
   }
 
   const renderGridItem = channel => (
@@ -30,7 +56,7 @@ const StreamerGrid = ({ channels, setChannel }) => {
   // the below div lacks of classname styles.gridContainer which is not in css tho discord chat
   return (
     <div className={styles.container}>
-      <h2>{`Joaquin's Twitch Dashboard`}</h2>
+      <h2>{`🔻 Joar's Twitch Dashboard 🔺`}</h2>
       <div className={styles.gridContainer}>
         {channels.length > 0 && channels.map(renderGridItem)}
         {channels.length === 0 && renderNoItems()}
