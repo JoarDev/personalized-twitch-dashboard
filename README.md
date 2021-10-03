@@ -1,4 +1,4 @@
-<h1 align="center">Twitch dashboard ☑</h1>
+<h1 align="center">Personalized Twitch Dashboard ☑</h1>
 <p align="center">
     <img src="./twitchdashboard.gif" alt="twitch dashboard animated gif"/>
 </p>
@@ -10,7 +10,12 @@
 ## Where is the link?
 
 Here's the link 👉 [**twitch-dashboard.joardev.repl.co**](https://twitch-dashboard.joardev.repl.co/)
+---
+## They give NFT as a course certificate?
 
+Yes, Buildspace started this innitiative not too much ago. Here my NFT 👉 [**Buildspace: Build a Twitch Dashboard: Next.js + Twitch API | Cohort Alcor | #12**](https://opensea.io/assets/matic/0x3CD266509D127d0Eac42f4474F57D0526804b44e/276?force_update=true)
+
+---
 ## What does this screen mean?
 
 <img src="./replit-loading-screen.png" alt="replit loading screen"/>
