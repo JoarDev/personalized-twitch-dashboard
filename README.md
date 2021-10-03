@@ -10,10 +10,18 @@
 ## Where is the link?
 
 Here's the link 👉 [**twitch-dashboard.joardev.repl.co**](https://twitch-dashboard.joardev.repl.co/)
+
 ---
 ## They give NFT as a course certificate?
 
-Yes, Buildspace started this innitiative not too much ago. Here my NFT 👉 [**Buildspace: Build a Twitch Dashboard: Next.js + Twitch API | Cohort Alcor | #12**](https://opensea.io/assets/matic/0x3CD266509D127d0Eac42f4474F57D0526804b44e/276?force_update=true)
+Yes, Buildspace started this innitiative not too long ago. Here my NFT 👉 [**Buildspace: Build a Twitch Dashboard: Next.js + Twitch API | Cohort Alcor | #12**](https://opensea.io/assets/matic/0x3CD266509D127d0Eac42f4474F57D0526804b44e/276?force_update=true)
+
+or click the image 👇
+
+<a href="https://opensea.io/assets/matic/0x3CD266509D127d0Eac42f4474F57D0526804b44e/276?force_update=true" target="_blank">
+    <img src="https://lh3.googleusercontent.com/8s38jfTJk8KGbKJWX49TEgiTxd5F20QMWpAYAMYtFMVORugja9l2e9nU02Ktc1OneWJfx89JOCZdhZBztVHvyhqmis41rH18cb7Whjs=w600" alt="twitch dashboard nft certificate"/>
+</a>
+
 
 ---
 ## What does this screen mean?
