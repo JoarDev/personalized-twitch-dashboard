@@ -22,11 +22,11 @@ Just wait a couple seconds.
 ---
 ## What is this repo about?
 
-This repo contains the project that i created in the ["Build a Twitch Dashboard: Next.js + Twitch API"](https://www.udemy.com/course/react-and-serverless/) course by Buildspace.
+This repo contains the project that i created in the ["Build a Twitch Dashboard: Next.js + Twitch API"](https://buildspace.so/twitch-dashboard) course by Buildspace.
 
 This is my first try at NEXT.js framework and Alec, the instructor, made the whole experience super fun.
 
-The course was two weeks of twitch streams were Alec taught us how to deploy this website on replit, another awesome platform for coding.  It's literally an online IDE that has support for many languages.
+The course were two weeks of twitch streams where Alec taught us how to deploy this website on replit, another awesome platform for coding.  It's literally an online IDE that has support for many languages.
 
 ---
 ## Tech Stack for this project
